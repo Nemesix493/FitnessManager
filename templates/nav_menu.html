@@ -1,0 +1,15 @@
+{% if nav_list %}
+<ul>
+    {% for item in nav_list %}
+    <a href="{{item.link}}">
+        {% if item.active %}
+        <li class="active">
+        {% else %}
+        <li>
+        {% endif%}
+            {{ item.name }}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
+{% endif %}
