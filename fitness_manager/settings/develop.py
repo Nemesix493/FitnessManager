@@ -1,4 +1,4 @@
-from .base import *
+from .base import *  # noqa: F401
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-1@r*u2*&9^dfhjja52fep8qu8o$q8#q^+y@ta6@m-k$xzl@l$%'
@@ -14,6 +14,6 @@ ALLOWED_HOSTS = []
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # noqa: F405
     }
 }
