@@ -4,9 +4,12 @@ from django.contrib.auth import get_user_model
 
 # Create your models here.
 
+
 class User(AbstractUser):
     birthdate = models.DateField(
         verbose_name='Date of birth',
+        blank=False,
+        null=True
     )
 
 
@@ -21,5 +24,6 @@ class Weighing(models.Manager):
     user = models.ForeignKey(
         to=get_user_model(),
         related_name='weighings',
-        related_query_name='weighings'
+        related_query_name='weighings',
+        on_delete=models.CASCADE
     )
